@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# React Name Display
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objective
 
-## Available Scripts
+To understand how to use the React.js front-end library to create components which automatically update based on changes to the application state.
 
-In the project directory, you can run:
+## Learning
 
-### `npm start`
+In this lab, we will create a small React application that tracks the values of a person's name, and then greets that person by their name along with a friendly message.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Topics:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React State; `useState` and `setState`
+- React Forms; `onChange`
 
-### `npm test`
+## Achieving
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Your work will result in:
 
-### `npm run build`
+- A component that displays a person's name, along with a friendly message.
+- A form that allows for input from a human, to enter their full-name.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Procedure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Create a single component to display a message
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [ ] Use the `App` component to render (display) a friendly message.
+- [ ] Create a variable within the `App` component to reference your message.
+- [ ] Update the `App` component message to use the variable containing the message.
 
-### `npm run eject`
+### Add a form for a human to enter their full-name
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [ ] Within the `App` component, add a `<form />` child component.
+- [ ] Within the `<form />` component, add three `<input />` child components that will take in the person's first name, middle name, and last name.
+- [ ] Use the `useState` hook to create a variable corresponding to each of the three `<input />` components, and a function that updates that variable when called.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Connect the form to the component to update on change
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [ ] Attach an `onChange` event handler to each `<input />` component.
+- [ ] For the value of the `onChange` handler, define an inline Arrow Function that uses the `setSomeVariableName` function corresponding to the `<input />` element that is updated by the human.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+E.g.
 
-## Learn More
+```jsx
+  // arrow functions can be defined inline
+  <input onChange={(e) => { setSomeVariableName(e.target.value)}}
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Use the `state` variables to compute a message to the human
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [ ] Use the `someStateVariable`'s that you created above in the component that messages the human by their full name.
+- [ ] Combine the `message` variable and the state variables for the full message.
 
-### Code Splitting
+## Review
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+In this lab, we will have created a small React application that tracks the values of a person's name, and then greets that person by their name along with a friendly message.
 
-### Analyzing the Bundle Size
+The software should:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Take in the user's full name in a form
+- Print their full name in a friendly message to the page.
 
-### Making a Progressive Web App
+## Going Further
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- How you could you extract the inline `onChange` handler functions within the `<input />` components to use a shared `onChange` handler, rather then each using their own?
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Notice how the message updates when the user types new values into the `<input />` components. How could you make the form only update the message when the user **submits** the form?
