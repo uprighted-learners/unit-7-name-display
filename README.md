@@ -22,6 +22,10 @@ Your work will result in:
 
 ## Procedure
 
+## Starting up the React App
+- [ ] Once cloned, install the projects dependencies using `npm install` or `npm i`
+- [ ] Use `npm start` and visit the app on your browser at `localhost:3000`
+
 ### Create a single component to display a message
 
 - [ ] Use the `App` component to render (display) a friendly message.
