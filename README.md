@@ -6,7 +6,7 @@ To understand how to use the React.js front-end library to create components whi
 
 ## Learning
 
-In this lab, we will create a small React application that tracks the values of a person's name, and then greets that person by their name along with a friendly message.
+In this exercise, we will create a small React application that tracks the values of a person's name, and then greets that person by their name along with a friendly message.
 
 Topics:
 
@@ -57,7 +57,7 @@ E.g.
 
 ## Review
 
-In this lab, we will have created a small React application that tracks the values of a person's name, and then greets that person by their name along with a friendly message.
+In this exercise, we will have created a small React application that tracks the values of a person's name, and then greets that person by their name along with a friendly message.
 
 The software should:
 
